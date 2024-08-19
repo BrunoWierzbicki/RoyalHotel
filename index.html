@@ -5,86 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RoyalHotel</title>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <h1>RoyalHotel</h1>
+    <header class="bg-light py-3">
+        <div class="container">
+            <h1 class="text-left">RoyalHotel</h1>
+        </div>
     </header>
 
-    <div class="container">
-        <div class="left-column">
-            <div class="image-container">
-                <h2>Sinta o conforto acolhedor das nossas hospedagens</h2>
-                <p>Hospede-se nos nossos hotéis com quartos a partir de R$ 100,00</p>
-                <button>SAIBA MAIS</button>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column align-items-center">
+                <div class="image-container text-center text-white p-4" style="background-image: url('imagens/350x350.jpg'); background-size: cover; background-position: center;">
+                    <h2>Sinta o conforto acolhedor das nossas hospedagens</h2>
+                    <p>Hospede-se nos nossos hotéis com quartos a partir de R$ 100,00</p>
+                    <button class="btn btn-primary">SAIBA MAIS</button>
+                </div>
             </div>
-        </div>
-        <div class="right-column">
-            <img src="imagens/500x400.jpg" alt="Imagem do Hotel">
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="imagens/500x400.jpg" alt="Imagem do Hotel" class="img-fluid">
+            </div>
         </div>
     </div>
 
-    <div class="section-title">
+    <div class="container text-center my-4">
         <h2>POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</h2>
     </div>
 
-    <div class="features">
-        <div class="feature-item">
-            <img src="imagens/cafe.png" alt="Ícone">
-            <div>
-                <h3>Delicioso café da manhã</h3>
-                <p>Incluso em todas as diárias</p>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="imagens/cafe.png" alt="Ícone" class="mr-3">
+                <div>
+                    <h3>Delicioso café da manhã</h3>
+                    <p>Incluso em todas as diárias</p>
+                </div>
             </div>
-        </div>
-        <div class="feature-item">
-            <img src="imagens/mapa.png" alt="Ícone">
-            <div>
-                <h3>Fácil acesso</h3>
-                <p>Perto dos principais pontos turísticos</p>
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="imagens/mapa.png" alt="Ícone" class="mr-3">
+                <div>
+                    <h3>Fácil acesso</h3>
+                    <p>Perto dos principais pontos turísticos</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="rooms">
-        <h2>NOSSOS QUARTOS</h2>
-        <div class="room-list">
-            <div class="room">
-                <img src="imagens/solteiro.jpg" alt="Suíte Solteiro">
+    <div class="container border p-4 my-4">
+        <h2 class="text-center">NOSSOS QUARTOS</h2>
+        <div class="row">
+            <div class="col-md-4 text-center mb-4">
+                <img src="imagens/solteiro.jpg" alt="Suíte Solteiro" class="img-fluid">
                 <p>Suíte Solteiro</p>
             </div>
-            <div class="room">
-                <img src="imagens/casal.jpg" alt="Suíte Casal">
+            <div class="col-md-4 text-center mb-4">
+                <img src="imagens/casal.jpg" alt="Suíte Casal" class="img-fluid">
                 <p>Suíte Casal</p>
             </div>
-            <div class="room">
-                <img src="imagens/master.jpg" alt="Suíte Master">
+            <div class="col-md-4 text-center mb-4">
+                <img src="imagens/master.jpg" alt="Suíte Master" class="img-fluid">
                 <p>Suíte Master</p>
             </div>
         </div>
     </div>
 
-    <div class="reservation">
-        <div class="reservation-left">
-            <h2>FAÇA SUA RESERVA</h2>
-            <p>Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
-        </div>
-        <div class="reservation-right">
-            <form>
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <input type="date" placeholder="Data de entrada" required>
-                <input type="date" placeholder="Data de saída" required>
-                <input type="number" placeholder="Adultos" required>
-                <input type="number" placeholder="Crianças">
-                <textarea placeholder="Observações"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+    <div class="container border p-4 my-4">
+        <div class="row">
+            <div class="col-md-6 text-center mb-4 mb-md-0">
+                <h2>FAÇA SUA RESERVA</h2>
+                <p>Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Data de entrada" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control" placeholder="Data de saída" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Adultos" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" placeholder="Crianças">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="Observações"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                </form>
+            </div>
         </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
 
 </body>
