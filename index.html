@@ -79,7 +79,7 @@
                 <p>Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
             </div>
             <div class="col-md-6">
-                <form>
+                <form id="reserva-form">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Nome" required>
                     </div>
@@ -108,9 +108,40 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            $('#reserva-form').on('submit', function(event) {
+                event.preventDefault();
+                
+                // Coleta de dados do formulário
+                const formData = {
+                    nome: $('input[placeholder="Nome"]').val(),
+                    email: $('input[placeholder="Email"]').val(),
+                    dataEntrada: $('input[placeholder="Data de entrada"]').val(),
+                    dataSaida: $('input[placeholder="Data de saída"]').val(),
+                    adultos: $('input[placeholder="Adultos"]').val(),
+                    criancas: $('input[placeholder="Crianças"]').val(),
+                    observacoes: $('textarea[placeholder="Observações"]').val()
+                };
+                
+                
+                $.ajax({
+                    url: 'http://localhost:3000/reservas',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(formData),
+                    success: function(response) {
+                        console.log("Resposta do servidor:", response);
+                        alert('Reserva enviada com sucesso!');
+                        $('#reserva-form')[0].reset();
+                    },
+                    error: function(error) {
+                        console.error("Erro ao enviar reserva:", error);
+                        alert('Falha ao enviar reserva.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
