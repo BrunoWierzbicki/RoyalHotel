@@ -1,0 +1,24 @@
+{
+  "reservas": [
+    {
+      "id": "8185",
+      "nome": "Maria",
+      "email": "maria@gmail.com",
+      "dataEntrada": "2024-08-19",
+      "dataSaida": "2024-08-27",
+      "adultos": "1",
+      "criancas": "",
+      "observacoes": ""
+    },
+    {
+      "id": "7e9b",
+      "nome": "Geovanna",
+      "email": "geovanna@gmail.com",
+      "dataEntrada": "2024-08-19",
+      "dataSaida": "2024-08-20",
+      "adultos": "1",
+      "criancas": "",
+      "observacoes": ""
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - RoyalHotel</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Reservas Realizadas</h1>
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Data de Entrada</th>
+                    <th>Data de Saída</th>
+                    <th>Adultos</th>
+                    <th>Crianças</th>
+                    <th>Observações</th>
+                </tr>
+            </thead>
+            <tbody id="reservas-table-body">
+               
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.get('http://localhost:3000/reservas', function(data) {
+                const tableBody = $('#reservas-table-body');
+                data.forEach(reserva => {
+                    const row = `<tr>
+                        <td>${reserva.nome}</td>
+                        <td>${reserva.email}</td>
+                        <td>${reserva.dataEntrada}</td>
+                        <td>${reserva.dataSaida}</td>
+                        <td>${reserva.adultos}</td>
+                        <td>${reserva.criancas}</td>
+                        <td>${reserva.observacoes}</td>
+                    </tr>`;
+                    tableBody.append(row);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
