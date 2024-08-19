@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalHotel</title>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>RoyalHotel</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-column">
+            <div class="image-container">
+                <h2>Sinta o conforto acolhedor das nossas hospedagens</h2>
+                <p>Hospede-se nos nossos hotéis com quartos a partir de R$ 100,00</p>
+                <button>SAIBA MAIS</button>
+            </div>
+        </div>
+        <div class="right-column">
+            <img src="imagens/500x400.jpg" alt="Imagem do Hotel">
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>POR QUE SE HOSPEDAR EM NOSSOS HOTÉIS?</h2>
+    </div>
+
+    <div class="features">
+        <div class="feature-item">
+            <img src="/imagens/cafe.png" alt="Ícone">
+            <div>
+                <h3>Delicioso café da manhã</h3>
+                <p>Incluso em todas as diárias</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <img src="/imagens/mapa.png" alt="Ícone">
+            <div>
+                <h3>Fácil acesso</h3>
+                <p>Perto dos principais pontos turísticos</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="rooms">
+        <h2>NOSSOS QUARTOS</h2>
+        <div class="room-list">
+            <div class="room">
+                <img src="/imagens/solteiro.jpg" alt="Suíte Solteiro">
+                <p>Suíte Solteiro</p>
+            </div>
+            <div class="room">
+                <img src="/imagens/casal.jpg" alt="Suíte Casal">
+                <p>Suíte Casal</p>
+            </div>
+            <div class="room">
+                <img src="/imagens/master.jpg" alt="Suíte Master">
+                <p>Suíte Master</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="reservation">
+        <div class="reservation-left">
+            <h2>FAÇA SUA RESERVA</h2>
+            <p>Entre em contato conosco informando as datas desejadas. Lhe retornaremos informando a disponibilidade e repassando detalhes da reserva.</p>
+        </div>
+        <div class="reservation-right">
+            <form>
+                <input type="text" placeholder="Nome" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" placeholder="Data de entrada" required>
+                <input type="date" placeholder="Data de saída" required>
+                <input type="number" placeholder="Adultos" required>
+                <input type="number" placeholder="Crianças">
+                <textarea placeholder="Observações"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>
