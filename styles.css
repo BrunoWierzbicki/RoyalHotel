@@ -1,20 +1,21 @@
+/* Reset de margens e preenchimento */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo do corpo */
 body {
     font-family: 'ABeeZee', sans-serif;
-    padding: 0 20px;
     line-height: 1.6;
 }
 
+/* Estilo do cabeçalho */
 header {
     width: 100%;
     background-color: #f2f2f2;
     padding: 15px 0;
-    text-align: left;
 }
 
 header h1 {
@@ -23,32 +24,20 @@ header h1 {
     margin-left: 20px;
 }
 
+/* Estilo do container principal */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+    max-width: 1140px; /* Define a largura máxima do container */
+    margin: auto;
 }
 
-.left-column, .right-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.left-column {
-    margin-right: 20px;
-}
-
+/* Estilo da imagem e colunas na seção principal */
 .image-container {
     position: relative;
     width: 100%;
     max-width: 350px;
-    background-image: url('imagens/350x350.jpg');
     background-size: cover;
     background-position: center;
-    text-shadow: #000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     color: #FFFFFF;
     padding: 20px;
     text-align: left;
@@ -75,20 +64,13 @@ header h1 {
     cursor: pointer;
 }
 
-.section-title {
+
+.text-center {
     text-align: center;
-    margin: 40px 0;
 }
 
-.section-title h2 {
-    font-size: 36px;
-    color: #000000;
-}
 
 .features {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 40px;
 }
 
@@ -96,7 +78,7 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .feature-item img {
@@ -112,12 +94,12 @@ header h1 {
     font-size: 22px;
 }
 
+
 .rooms {
     border: 2px solid #000;
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    max-width: 1000px;
 }
 
 .rooms h2 {
@@ -127,7 +109,7 @@ header h1 {
 
 .room-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -135,7 +117,7 @@ header h1 {
     text-align: center;
     margin-bottom: 20px;
     flex: 1;
-    min-width: 150px;
+    min-width: 200px; 
 }
 
 .room p {
@@ -143,34 +125,24 @@ header h1 {
     color: #000000;
 }
 
+
 .reservation {
     border: 2px solid #000;
     margin: 20px auto;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1000px;
 }
 
-.reservation-left, .reservation-right {
-    flex: 1;
-    min-width: 300px;
+.reservation-left,
+.reservation-right {
     margin-bottom: 20px;
 }
 
 .reservation-left {
-    
     text-align: center;
-    padding-left: 40px;
-    padding-right: 40px;
-
 }
 
 .reservation-left h2 {
     font-size: 36px;
-    text-align: center;
-    
 }
 
 .reservation-left p {
@@ -183,7 +155,7 @@ header h1 {
     gap: 10px;
 }
 
-.reservation-right input, 
+.reservation-right input,
 .reservation-right textarea {
     padding: 10px;
     font-size: 16px;
@@ -208,10 +180,6 @@ header h1 {
         font-size: 20px;
     }
 
-    .container {
-        flex-direction: column;
-    }
-
     .image-container h2 {
         font-size: 22px;
     }
@@ -220,20 +188,18 @@ header h1 {
         font-size: 16px;
     }
 
-    .right-column {
+    .img-fluid {
         padding-top: 20px;
     }
 
-    .section-title h2 {
-        font-size: 28px;
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .feature-item h3 {
-        font-size: 24px;
-    }
-
-    .feature-item p {
-        font-size: 20px;
+    .feature-item {
+        margin-bottom: 20px;
     }
 
     .rooms h2 {
@@ -260,16 +226,19 @@ header h1 {
         font-size: 14px;
     }
 
-    .section-title h2 {
-        font-size: 24px;
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .feature-item h3 {
-        font-size: 20px;
+    .feature-item {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .feature-item p {
-        font-size: 18px;
+    .feature-item img {
+        margin-bottom: 10px;
     }
 
     .rooms h2 {
